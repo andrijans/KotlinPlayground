@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andrijans.playground.presentation.main.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            android:background="@color/colorPrimary"
+            app:contentInsetStartWithNavigation="0dp"
+            app:theme="@style/ToolBarStyle"
+            app:titleTextAppearance="@style/TitleCollapsed"
+            android:layout_height="?attr/actionBarSize">
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.andrijans.kotlinplayground.presentation.common.views.NonSwipeableViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <include layout="@layout/navigation_header"/>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

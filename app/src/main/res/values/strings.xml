@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Playground</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="navigation">
+        <item>Movies</item>
+        <item>Tv Shows</item>
+    </string-array>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="director"><b>Director:</b></string>
+    <string name="overview">Overview</string>
+    <string name="release_date">Release date</string>
+</resources>
