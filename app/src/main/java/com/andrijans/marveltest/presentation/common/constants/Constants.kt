@@ -5,6 +5,6 @@ package com.andrijans.marveltest.presentation.common.constants
  */
 class Constants {
     companion object {
-        val API_URL="https://gateway.marvel.com/v1/public/"
+        const val API_URL="https://gateway.marvel.com/v1/public/"
     }
 }

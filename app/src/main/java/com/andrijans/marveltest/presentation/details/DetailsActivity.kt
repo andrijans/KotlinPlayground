@@ -32,16 +32,12 @@ class DetailsActivity : DaggerAppCompatActivity(), DetailsContract.View {
     @Inject
     lateinit var presenter: DetailsContract.Presenter
 
-//    override fun injectView() {
-//        App.appComponent.plus(DetailsModule(this)).inject(this)
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
         initToolbar()
         presenter.onCreate(intent.getParcelableExtra(CHARACTER_KEY))
-        openInWebButton.setOnClickListener({ presenter.openInWebButtonClicked() })
+        openInWebButton.setOnClickListener{ presenter.openInWebButtonClicked() }
     }
 
     override fun setCharacterImage(url: String) {
@@ -72,7 +68,7 @@ class DetailsActivity : DaggerAppCompatActivity(), DetailsContract.View {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        toolbar.setNavigationOnClickListener({ presenter.navigationBackButtonClicked() })
+        toolbar.setNavigationOnClickListener{ presenter.navigationBackButtonClicked() }
     }
 
 }

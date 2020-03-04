@@ -23,9 +23,6 @@ class MainActivity : DaggerAppCompatActivity(), MainContract.View {
 
     private lateinit var adapter: MainAdapter
 
-//    override fun injectView() {
-//        App.appComponent.plus(MainModule(this)).inject(this)
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
